@@ -1,7 +1,6 @@
 ' AWS icon macros. They all accept (e_alias, e_label, e_techn). Prefer including AWSPuml/[CATEGORY]/all.puml
 !define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/refs/heads/main/dist
 !includeurl AWSPuml/AWSCommon.puml
-!includeurl AWSPuml/AWSCommon.puml
 !includeurl AWSPuml/Analytics/all.puml
 !includeurl AWSPuml/Analytics/Analytics.puml
 !includeurl AWSPuml/Analytics/Athena.puml
