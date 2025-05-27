@@ -53,11 +53,9 @@ jobs:
         with:
           tag: plantuml
           name: plantuml
-          draft: false
-          prerelease: false
-          overwrite: true
-          # Newline or comma delimited
-          files: |
+          allowUpdates: true
+          replacesArtifacts: true
+          artifacts: |
             AWS.puml
             Azure.puml
             GCP.puml
