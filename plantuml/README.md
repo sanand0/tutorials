@@ -4,15 +4,15 @@
 
 To guide ChatGPT (or any LLM) to create a PlantUML architecture diagram, you can start with the code or an explanation.
 
-**STEP 1a**: Write your instructions for the architecture.
+**STEP 1a**: Write your instructions for the architecture and copy it.
 
-**STEP 1b**: OR, to start with the code, use [files-to-prompt](https://github.com/simonw/files-to-prompt):
+**STEP 1b**: OR, copy your code via [files-to-prompt](https://github.com/simonw/files-to-prompt):
 
 ```bash
 uvx files-to-prompt --cxml README.md ... | xclip -selection clipboard
 ```
 
-**STEP 2**: Get the icons list for your cloud environment:
+**STEP 2**: Copy the icons list for your cloud environment:
 
 - [AWS](AWS.puml)
 - [Azure](Azure.puml)
@@ -20,14 +20,15 @@ uvx files-to-prompt --cxml README.md ... | xclip -selection clipboard
 
 These were generated via [`bash icons.sh`](icons.sh).
 
-**STEP 3**: Prompt ChatGPT (or any LLM) for a PlantUML diagram:
+**STEP 3**: Copy this prompt to ChatGPT (or any LLM):
 
-> [Your code or instructions]
+> Create a PlantUML component diagram for the technical architecture based on the code/instructions below.
 >
-> Based on this, create a PlantUML component diagram to describe the technical architecture.
-> For EVERY cloud component use the icon macro ONLY from this list.
+> [Your code or instructions from STEP 1]
 >
-> [Cloud icon list.puml]
+> For EVERY cloud component use the icon macro ONLY from this list:
+>
+> [Your .puml from STEP 2]
 
 Here is an example:
 
