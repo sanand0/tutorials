@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Hierarchy</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiMyNTYzZWIiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTYgNyAyIDcgNyAyLTcgMi0yIDctMi03LTctMiA3LTJaIi8+PC9zdmc+">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header class="text-center p-3">
+      <h1>Company Hierarchy</h1>
+    </header>
+    <main>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="root-selector">Root Company</label>
+            <select class="form-select" id="root-selector"></select>
+          </div>
+        </div>
+      </div>
+      <div id="chart-container" class="container" style="max-width:80vh">
+        <svg id="sunburst"></svg>
+      </div>
+      <div class="text-center small text-muted mt-3" id="legend">
+        <p class="mb-0">Click on an arc to zoom in. Click on the center circle to zoom out.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>
