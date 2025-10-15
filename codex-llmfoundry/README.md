@@ -147,6 +147,12 @@ You can now use Codex in VS Code with LLM Foundry. Here are a few simple things 
 
 ## 9. Install Python
 
-Open the Windows search bar and search for "Python".
+Open the Windows search bar and search for "Python". Install any of the Python versions from the Microsoft Store. This will allow Codex to run Python code locally.
 
-(to be continued...)
+[![How to Install and Setup Python 3 13 on Windows 11 via the Microsoft Store - 3 min](https://i.ytimg.com/vi_webp/aX4KV5i-cd4/sddefault.webp)](https://youtu.be/aX4KV5i-cd4)
+
+## 10. Usage tips
+
+To avoid Codex asking for too many approvals, use the "Agent (full access)" mode.
+
+![](codex-agent-full-access.webp)
