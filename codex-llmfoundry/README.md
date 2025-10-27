@@ -56,22 +56,15 @@ Click on the gear-like settings icon to the right of the Codex pane, then **Code
 Paste the following into the `config.toml` file and save it.
 
 ```ini
+#
 profile = "llmfoundry_azure"
-
-[profiles.llmfoundry]
-model_provider = "llmfoundry_openai"
-model = "gpt-5-codex"
-model_reasoning_effort = "low"
-
-[model_providers.llmfoundry_openai]
-name = "LLM Foundry - OpenAI"
-base_url = "https://llmfoundry.straive.com/openai/v1"
-env_key = "LLMFOUNDRY_TOKEN"
-wire_api = "responses"
+# Alternate profiles:
+# profile = "llmfoundry_gemini"
+# profile = "llmfoundry_openai"
+# profile = "llmfoundry_openrouter"
 
 [profiles.llmfoundry_azure]
 model_provider = "llmfoundry_azure"
-model_reasoning_effort = "high"
 
 [model_providers.llmfoundry_azure]
 name = "LLM Foundry - Azure"
@@ -79,6 +72,35 @@ base_url = "https://llmfoundry.straive.com/azure/openai/deployments/gpt-5"
 env_key = "LLMFOUNDRY_TOKEN"
 wire_api = "chat"
 query_params = { api-version = "2025-04-01-preview" }
+
+[profiles.llmfoundry_gemini]
+model_provider = "llmfoundry_gemini"
+model = "gemini-2.5-flash"
+
+[model_providers.llmfoundry_gemini]
+name = "LLM Foundry - Gemini"
+base_url = "https://llmfoundry.straive.com/gemini/v1beta/openai"
+env_key = "LLMFOUNDRY_TOKEN"
+wire_api = "chat"
+
+[profiles.llmfoundry_openai]
+model_provider = "llmfoundry_openai"
+
+[model_providers.llmfoundry_openai]
+name = "LLM Foundry - OpenAI"
+base_url = "https://llmfoundry.straivedemo.com/openai/v1"
+env_key = "LLMFOUNDRY_TOKEN"
+wire_api = "responses"
+
+[profiles.llmfoundry_openrouter]
+model_provider = "llmfoundry_openrouter"
+model = "openai/gpt-5-codex"
+
+[model_providers.llmfoundry_openrouter]
+name = "LLM Foundry - Gemini"
+base_url = "https://llmfoundry.straive.com/openrouter/v1"
+env_key = "LLMFOUNDRY_TOKEN"
+wire_api = "chat"
 ```
 
 Any changes to `config.toml` require a restart of VS Code.
