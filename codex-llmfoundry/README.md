@@ -56,7 +56,7 @@ Click on the gear-like settings icon to the right of the Codex pane, then **Code
 Paste the following into the `config.toml` file and save it.
 
 ```ini
-profile = "llmfoundry"
+profile = "llmfoundry_azure"
 
 [profiles.llmfoundry]
 model_provider = "llmfoundry_openai"
@@ -68,6 +68,17 @@ name = "LLM Foundry - OpenAI"
 base_url = "https://llmfoundry.straive.com/openai/v1"
 env_key = "LLMFOUNDRY_TOKEN"
 wire_api = "responses"
+
+[profiles.llmfoundry_azure]
+model_provider = "llmfoundry_azure"
+model_reasoning_effort = "high"
+
+[model_providers.llmfoundry_azure]
+name = "LLM Foundry - Azure"
+base_url = "https://llmfoundry.straive.com/azure/openai/deployments/gpt-5"
+env_key = "LLMFOUNDRY_TOKEN"
+wire_api = "chat"
+query_params = { api-version = "2025-04-01-preview" }
 ```
 
 Any changes to `config.toml` require a restart of VS Code.
