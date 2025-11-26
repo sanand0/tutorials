@@ -2,6 +2,7 @@
 
 A collection of tutorials that captures my learning journey.
 
+- 26 Nov 2025. [How to write shorter, elegant code](short-code/)
 - 14 Oct 2025. [How to Use Codex with VS Code and ChatGPT paid plans](codex-vscode/)
 - 14 Oct 2025. [How to Use Codex with VS Code and LLM Foundry](codex-llmfoundry/)
 - 19 Sep 2025. [Writing scrapers using Playwright MCP on Codex CLI](codex-playwright/)
