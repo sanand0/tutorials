@@ -2,6 +2,7 @@
 
 A collection of tutorials that captures my learning journey.
 
+- 26 Nov 2025. [How mapscii renders maps on terminal](mapscii-rendering/)
 - 26 Nov 2025. [How to write shorter, elegant code](short-code/)
 - 14 Oct 2025. [How to Use Codex with VS Code and ChatGPT paid plans](codex-vscode/)
 - 14 Oct 2025. [How to Use Codex with VS Code and LLM Foundry](codex-llmfoundry/)
