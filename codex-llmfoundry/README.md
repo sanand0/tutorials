@@ -56,7 +56,6 @@ Click on the gear-like settings icon to the right of the Codex pane, then **Code
 Paste the following into the `config.toml` file and save it.
 
 ```ini
-#
 profile = "llmfoundry_azure"
 # Alternate profiles:
 # profile = "llmfoundry_gemini"
@@ -88,7 +87,7 @@ model_provider = "llmfoundry_openai"
 
 [model_providers.llmfoundry_openai]
 name = "LLM Foundry - OpenAI"
-base_url = "https://llmfoundry.straivedemo.com/openai/v1"
+base_url = "https://llmfoundry.straive.com/openai/v1"
 env_key = "LLMFOUNDRY_TOKEN"
 wire_api = "responses"
 
@@ -179,6 +178,8 @@ You can now use Codex in VS Code with LLM Foundry. Here are a few simple things 
 3. Copy **Excel** files into the folder and prompt Codex to "Write code to analyze this data".
 
 ## 9. Install Python
+
+Tell Codex to `Install Python and test it. Tell me if it worked`. There's a good chance it'll install it automatically!
 
 Open the Windows search bar and search for "Python". Install any of the Python versions from the Microsoft Store. This will allow Codex to run Python code locally.
 
