@@ -64,6 +64,8 @@ profile = "llmfoundry_azure"
 
 [profiles.llmfoundry_azure]
 model_provider = "llmfoundry_azure"
+# NOTE: Azure typically wants the *deployment name* here
+model = "gpt-5"
 
 [model_providers.llmfoundry_azure]
 name = "LLM Foundry - Azure"
@@ -84,6 +86,9 @@ wire_api = "chat"
 
 [profiles.llmfoundry_openai]
 model_provider = "llmfoundry_openai"
+model = "gpt-5.2-codex"
+model_reasoning_effort = "medium"
+wire_api = "responses"
 
 [model_providers.llmfoundry_openai]
 name = "LLM Foundry - OpenAI"
@@ -100,9 +105,40 @@ name = "LLM Foundry - Gemini"
 base_url = "https://llmfoundry.straive.com/openrouter/v1"
 env_key = "LLMFOUNDRY_TOKEN"
 wire_api = "chat"
+
+[profiles.openai]
+model_provider = "openai"
+model = "gpt-5.2-codex"
+ # use what your OpenAI account has access to
+
+[model_providers.openai]
+name = "OpenAI (Public)"
+base_url = "https://api.openai.com/v1"
+env_key = "OPENAI_API_KEY" # Set this environment variable to your OpenAI API key
+wire_api = "responses"
+
+[profiles.openrouter]
+model_provider = "openrouter"
+model = "gpt-5.2-codex" # example; pick any OpenRouter model id
+
+[model_providers.openrouter]
+name = "OpenRouter (Public)"
+base_url = "https://openrouter.ai/api/v1"
+env_key = "OPENROUTER_API_KEY" # Set this environment variable to your OpenRouter API key
+wire_api = "chat"
 ```
 
 Any changes to `config.toml` require a restart of VS Code.
+
+<!--
+
+Test this on the CLI using:
+
+codex -p llmfoundry_openai "Hi"
+codex -p llmfoundry_azure "Hi"
+...
+
+-->
 
 ## 5. Set your LLM Foundry API key
 
