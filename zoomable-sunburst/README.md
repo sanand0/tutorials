@@ -10,9 +10,9 @@ Here is the prompt sequence I used.
 > Write a program to generate REALISTIC fake data for company hierarchies.
 > The data should have 3 columns:
 >
-> 1.  company: a company name
-> 2.  parent: parent company name that owns company
-> 3.  root: an ultimate parent company name
+> 1. company: a company name
+> 2. parent: parent company name that owns company
+> 3. root: an ultimate parent company name
 >
 > Generate 15 different unique roots.
 > For each root, generate a set of children, some of them having more children, some of which having more children, and so on.

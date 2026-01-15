@@ -78,11 +78,11 @@ The resulting `top-directors.csv` contains cleaned infobox fields plus a JSON sn
 5. **Codified expected behaviour with tests.** Wrote pytest cases that lock in the top-five selection and cleaned infobox fields before finalizing the implementation.
    > entries = parse_top_directors(html, top_n=5, seed=0)
    > assert names == [
-   >     "John Ford",
-   >     "Frank Capra",
-   >     "William Wyler",
-   >     "Steven Spielberg",
-   >     "George Stevens",
+   > "John Ford",
+   > "Frank Capra",
+   > "William Wyler",
+   > "Steven Spielberg",
+   > "George Stevens",
    > ]
 
 6. **Implemented the reusable scraper and CLI wrapper.** Consolidated parsing, scraping, and CSV-writing logic, then connected it to a Typer entrypoint.
